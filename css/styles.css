@@ -99,6 +99,30 @@ h2 {
   font-size: 15px;
 }
 
+.completed {
+  color: white;
+  background-color: green;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.pending {
+  color: black;
+  background-color: #ffcccc;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.incomplete {
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
 .input-text-box {
   display: flex;
   justify-content: center;

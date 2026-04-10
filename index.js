@@ -1,19 +1,4 @@
 $(document).ready(function () {
-  // let counter = 1;
-
-  /** 
-    $("#create-task").click(function () {
-      $("#container").prepend(`
-        <div class="each-task">
-          <input type="checkbox">
-          <p>Tarea ${counter}</p>
-        </div>
-      `);
-      */
-
-  // let taskTitle = $("#task-input").val("");
-  // let taskDescription = $("#description-input").val("");
-
   let event = $("#create-task").click(function () {
     let taskTitle = $("#task-input").val();
     let taskDescription = $("#description-input").val();
@@ -31,24 +16,15 @@ $(document).ready(function () {
     `);
   });
 
-  // counter++;
-
-  $("#tick-completed").click(function () {
-    $(".each-task").css(function () {
-      $(".each-task").css("color", "white");
-      $(".each-task").css("background-color", "green");
-    });
+  $(document).on("click", "#tick-completed", function () {
+    $(this).closest(".each-task").css("background-color", "green");
   });
 
-  $("#tick-not-completed").click(function () {
-    $(".each-task").css(function () {
-      $(".each-task").css("color", "black");
-      $(".each-task").css("background-color", "red");
-    });
+  $(document).on("click", "#tick-not-completed", function () {
+    $(this).closest(".each-task").css("background-color", "#ffcccc");
   });
 
-  $("#delete-task").click(function () {
-    $(".each-task").parent().remove();
+  $(document).on("click", "#delete-task", function () {
+    $(this).closest(".each-task").remove();
   });
 });
-// });
